@@ -10,15 +10,13 @@ package analizador;
  */
 public enum Tokens {
     
-    ent, 
-    re,
-    cad,
-    car,
-    Principal,
-    AbreParen,
-    CierraParen,
-    AbreLlave,
-    CierraLlave,
-    Error
+    Reservadas,
+    Suma,
+    Resta,
+    Multiplicacion,
+    Division,
+    Igual,
+    Identificador,
+    ERROR
     
 }
