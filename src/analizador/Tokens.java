@@ -17,6 +17,7 @@ public enum Tokens {
     Division,
     Igual,
     Identificador,
+    Numero,
     ERROR
     
 }

@@ -4,6 +4,8 @@
  */
 package analizador;
 
+import java.io.File;
+
 /**
  *
  * @author alex1
@@ -14,8 +16,15 @@ public class Analizador {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("HOLA");
+        String ruta ="C:/Users/alex1/Documents/NetBeansProjects/Analizador/src/analizador/Lexer.flex";
+        generarLexer(ruta);
     }
+    
+    public static void generarLexer(String ruta) {
+        File archivo = new File(ruta);
+        JFlex.Main.generate(archivo);
+    }
+    
+    
     
 }

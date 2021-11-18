@@ -2,7 +2,7 @@ package analizador;
 import static analizador.Tokens.*;
 %%
 %class Lexer
-$type Tokens
+%type Tokens
 L=[a-zA-Z_]+
 D=[0-9]+
 espacio=[ ,\t,\r,\n]+
@@ -22,6 +22,6 @@ car {lexeme=yytext(); return Reservadas;}
 "=" {return Igual;} 
 
 {L}({L}|{D})* {lexeme=yytext(); return Identificador;}
-("("{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
+("(-"{D}+")")|{D}+ {lexeme=yytext(); return Numero;}
  . {return ERROR;}
 
